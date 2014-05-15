@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get '/users/new' #should load form
-  post 'users'	=> 'users#create' #should go to users create
+	resources :users
+  #get '/users/new' #should load form
+  #post 'users'	=> 'users#create' #should go to users create
   root 'pages#index' #get '/' => 'pages/index'
   get '/about' => 'pages#about'
 	get '/another' => 'pages#another'
+	
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
